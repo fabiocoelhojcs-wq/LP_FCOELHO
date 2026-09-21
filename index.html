@@ -15,8 +15,272 @@ footer{padding:26px 0}.footer-row{color:var(--muted);font-size:.85rem}
 <section class="hero"><div class="hero-copy"><h1>Móveis para Escritório e Projetos Corporativos no Rio de Janeiro</h1><p class="lede">Cadeiras ergonômicas, mesas de reunião, estações de trabalho e móveis sob medida. Soluções completas de mobiliário para empresas com atendimento no RJ e SP.</p><div class="hero-actions"><a class="btn btn-primary" href="https://wa.me/5521969004585" target="_blank" rel="noopener">Falar no WhatsApp</a><a class="btn btn-secondary" href="#orcamento">Solicitar orçamento</a></div></div><div class="hero-photo"><img src="assets/boardroom_view.jpg" alt="Projeto moderno de móveis para escritório e mobiliário corporativo no Rio de Janeiro" width="1672" height="941" fetchpriority="high"></div></section>
 <section class="feature" id="cadeiras"><div class="ph"><img src="assets/boardroom_wood.jpg" alt="Sala de reunião executiva com cadeiras corporativas e mobiliário em madeira" width="1672" height="941" loading="lazy"></div><div class="cp"><h2>Salas de reunião e diretoria</h2><p>Cadeiras executivas e mesas pensadas para o ambiente onde a empresa toma decisão. Especificação certa para o padrão visual do escritório, com prazo de entrega compatível com o cronograma da obra ou reforma.</p><ul class="check-list"><li>Cadeiras com diversas opções de modelos e tecidos</li><li>Possibilidade de mesas e armários sob medida</li><li>Caixas de tomada e eletrificação conforme demanda</li></ul></div></section>
 <section class="feature rev"><div class="ph"><img src="assets/breakroom.jpg" alt="Copa corporativa com mesas e cadeiras para colaboradores" width="1672" height="941" loading="lazy"></div><div class="cp"><h2>Copa, convivência e áreas de apoio</h2><p>Mobiliário resistente ao uso diário, para os espaços onde as equipes descansam entre uma entrega e outra. Conforto e durabilidade sem perder o alinhamento com o restante do escritório.</p><ul class="check-list"><li>Mesas e cadeiras para copa e refeitórios</li><li>Cadeiras e banquetas ideais para esse tipo de espaço</li><li>Mobiliário de fácil manutenção e limpeza</li></ul></div></section>
-<section class="feature"><div class="ph"><img src="assets/lounge.jpg" alt="Recepção corporativa com sofás e poltronas estofadas para áreas colaborativas" width="1672" height="941" loading="lazy"></div><div class="cp"><h2>Recepção e áreas colaborativas</h2><p>Espaços de convivência, espera e trabalho compartilhado dizem muito sobre a empresa antes mesmo da primeira conversa. Sofás, poltronas e longarinas pensados para receber bem clientes, visitantes e equipes em ambientes de uso coletivo.</p><ul class="check-list"><li>Sofás modulares sob medidas, poltronas e cadeiras</li><li>Longarinas de espera para empresas e hospitais</li><li>Revestimentos em tecidos técnicos e sintéticos</li></ul></div></section>
-<section class="image-gallery" id="solucoes" aria-labelledby="ambientes-title"><div class="wrap"><div class="image-gallery-head"><h2 id="ambientes-title">Ambientes corporativos que valorizam a experiência</h2><p>Áreas de convivência, recepções e espaços de espera podem combinar conforto, identidade visual e funcionalidade. Nossos <strong>estofados modulares podem ser feitos sob medida</strong>, com diferentes tecidos, cores e configurações, de acordo com o perfil e a necessidade de cada empresa.</p></div><div class="image-gallery-grid"><figure class="image-gallery-card"><img src="assets/corporate_lounge.jpg" alt="Área de convivência corporativa com sofá modular, poltronas e bancada com banquetas" width="1672" height="941" loading="lazy"></figure></div></div></section>
+ <style>
+.solutions-band{
+  display:grid;
+  grid-template-columns:58% 42%;
+  width:100%;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  background:var(--bg);
+}
+
+.solutions-media{
+  min-height:620px;
+  overflow:hidden;
+}
+
+.solutions-media img{
+  width:100%;
+  height:100%;
+  min-height:620px;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+}
+
+.solutions-copy{
+  background:var(--panel);
+  padding:58px clamp(32px,4vw,72px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.solutions-heading{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:28px;
+  margin-bottom:38px;
+}
+
+.solutions-heading h2{
+  margin:0;
+  max-width:410px;
+  font-size:clamp(2rem,3.1vw,3.25rem);
+  line-height:1.03;
+  letter-spacing:-.035em;
+}
+
+.solutions-eyebrow,
+.solutions-secondary-eyebrow{
+  display:block;
+  margin-bottom:14px;
+  color:var(--accent);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+.solutions-btn{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:13px 18px;
+  background:#e8c27f;
+  color:#15120f;
+  text-decoration:none;
+  font-size:.82rem;
+  font-weight:800;
+  white-space:nowrap;
+  transition:transform .2s ease,opacity .2s ease;
+}
+
+.solutions-btn:hover{
+  transform:translateY(-2px);
+  opacity:.92;
+}
+
+.solutions-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:16px;
+}
+
+.solutions-list li{
+  position:relative;
+  padding-left:38px;
+  color:var(--text);
+  font-size:1rem;
+  line-height:1.45;
+}
+
+.solutions-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:1px;
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#e8c27f;
+  color:#15120f;
+  font-size:.78rem;
+  font-weight:900;
+}
+
+.solutions-secondary{
+  display:grid;
+  grid-template-columns:40% 60%;
+  width:100%;
+  border-bottom:1px solid var(--line);
+  background:var(--bg);
+}
+
+.solutions-secondary-copy{
+  padding:76px clamp(32px,5vw,82px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.solutions-secondary-copy h2{
+  margin:0 0 24px;
+  max-width:480px;
+  font-size:clamp(2rem,3.4vw,3.45rem);
+  line-height:1.02;
+  letter-spacing:-.04em;
+}
+
+.solutions-secondary-copy p{
+  max-width:510px;
+  margin:0 0 30px;
+  color:var(--muted);
+  font-size:1rem;
+  line-height:1.7;
+}
+
+.solutions-secondary-copy .solutions-btn{
+  align-self:flex-start;
+}
+
+.solutions-secondary-media{
+  padding:34px 34px 34px 0;
+}
+
+.solutions-secondary-media img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:520px;
+  object-fit:cover;
+  object-position:center;
+}
+
+@media(max-width:900px){
+  .solutions-band{
+    grid-template-columns:1fr;
+  }
+
+  .solutions-media,
+  .solutions-media img{
+    min-height:420px;
+    height:420px;
+  }
+
+  .solutions-copy{
+    padding:44px 24px;
+  }
+
+  .solutions-heading{
+    display:block;
+    margin-bottom:30px;
+  }
+
+  .solutions-heading h2{
+    margin-bottom:24px;
+  }
+
+  .solutions-secondary{
+    grid-template-columns:1fr;
+  }
+
+  .solutions-secondary-copy{
+    padding:48px 24px 36px;
+  }
+
+  .solutions-secondary-media{
+    padding:0 24px 24px;
+  }
+
+  .solutions-secondary-media img{
+    min-height:360px;
+    height:360px;
+  }
+}
+</style>
+
+<section class="solutions-band" id="solucoes" aria-labelledby="solucoes-title">
+  <div class="solutions-media">
+    <img
+      src="assets/lounge.jpg"
+      alt="Cadeiras e longarinas para ambientes corporativos"
+      width="1672"
+      height="941"
+      loading="lazy"
+    >
+  </div>
+
+  <div class="solutions-copy">
+    <span class="solutions-eyebrow">Soluções para diferentes espaços</span>
+
+    <div class="solutions-heading">
+      <h2 id="solucoes-title">Cadeiras, Ambientes e Muito Mais</h2>
+
+      <a class="solutions-btn" href="#orcamento">
+        Solicitar orçamento <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <ul class="solutions-list">
+      <li>Cadeiras ergonômicas e operativas</li>
+      <li>Mesas de reunião e estações de trabalho</li>
+      <li>Armários, gaveteiros e arquivos</li>
+      <li>Sofás modulares, poltronas e cadeiras</li>
+      <li>Longarinas de espera para empresas e hospitais</li>
+      <li>Revestimentos em tecidos técnicos e sintéticos</li>
+    </ul>
+  </div>
+</section>
+
+<section class="solutions-secondary" aria-labelledby="ambientes-title">
+  <div class="solutions-secondary-copy">
+    <span class="solutions-secondary-eyebrow">Ambientes corporativos</span>
+
+    <h2 id="ambientes-title">Ambientes que valorizam a experiência</h2>
+
+    <p>
+      Áreas de convivência, recepções e espaços de espera podem combinar
+      conforto, identidade visual e funcionalidade.
+      Nossos <strong>estofados modulares podem ser feitos sob medida</strong>,
+      com diferentes tecidos, cores e configurações, de acordo com o perfil
+      e a necessidade de cada empresa.
+    </p>
+
+    <a class="solutions-btn" href="#orcamento">
+      Solicitar orçamento <span aria-hidden="true">→</span>
+    </a>
+  </div>
+
+  <div class="solutions-secondary-media">
+    <img
+      src="assets/corporate_lounge.jpg"
+      alt="Ambiente corporativo com sofá modular, poltronas e bancada"
+      width="1672"
+      height="941"
+      loading="lazy"
+    >
+  </div>
+</section>
 <section id="orcamento" class="contact-section">
   <div class="contact-copy">
     <span class="eyebrow">Contato &amp; Orçamento</span>
